@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
+import Members from './members.jsx'
+import Messages from './messages.jsx'
+import ChatInput from './chatInput.jsx'
 
 //Hello team Burj this is a test comment
 
@@ -50,33 +53,23 @@ class Chat extends React.Component {
 	render() {
 		const {classroom, chat, actions} = this.props
 		const {currentText} = this.state
-
 		return <div>
 			<h1>Chatroom</h1>
-
-			<h2>Members</h2>
-			<ul>
-				{classroom.students.map(({id, name}) =>
-					<li key={id}><span>{name}</span></li>
-				)}
-			</ul>
-
-			<h2>Messages</h2>
-			<ul>
-				{chat.messages.map(({id, student, text, createdAt}) =>
-					<li key={id}>
-						<label>{student.name} at {createdAt.toISOString()}</label>
-						<p>{text}</p>
-					</li>
-				)}
-			</ul>
-
-			<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-			<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-			<p>{this.getTypingMessage()}</p>
+      <Members 
+        classroom={classroom}
+      />
+      <Messages
+        chat={chat}
+      />
+      <ChatInput 
+        currentText={this.currentText}
+        onType={this.onType}
+        onSend={this.onSend}
+        getTypingMessage={this.getTypingMessage}
+      />
+		
 		</div>
 	}
-
 }
 
 const studentPropType = PropTypes.shape({
