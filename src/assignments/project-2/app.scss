@@ -1,0 +1,32 @@
+#app {
+	padding: 1.0em 1.0em;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+	grid-area: footer;
+}
+
+aside.box {
+	padding: 0 20px;
+}
+
+.wrapper {
+ 	display: grid;
+  	grid-gap: 10px;
+  	grid-template-columns: 1fr  1fr;
+  	grid-template-areas:
+    "header header header"
+	  "sidebar main main"
+}
