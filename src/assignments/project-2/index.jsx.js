@@ -6,6 +6,8 @@ import Messages from './messages.jsx'
 import ChatInput from './chatInput.jsx'
 
 //Hello team Burj this is a test comment
+// This is also a test commit
+//another one
 
 class Chat extends React.Component {
 
