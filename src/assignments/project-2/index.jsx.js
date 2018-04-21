@@ -72,7 +72,7 @@ render() {
 				      />
 
 					<ChatInput 
-				        currentText={this.currentText}
+				        currentText={currentText}
 				        onType={this.onType}
 				        onSend={this.onSend}
 				        getTypingMessage={this.getTypingMessage}
