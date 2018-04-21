@@ -1,17 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ListItem from './listItem.jsx'
 
 class Messages extends React.Component {
   render() {
+
     const chat= this.props.chat
+    
     return <section>
       <h2>Messages</h2>
       <ul>
         {chat.messages.map(({id, student, text, createdAt}) =>
-          <li key={id}>
-            <label>{student.name} at {createdAt.toISOString()}</label>
-            <p>{text}</p>
-          </li>
+          <ListItem 
+            type='message'
+            key={id}
+            name={student.name}
+            postedAt={createdAt.toISOString()}
+            text={text}
+          />
         )}
       </ul>
     </section>
