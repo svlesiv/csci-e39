@@ -15,30 +15,8 @@ $font-family-body:"Roboto", sans-serif;
     box-shadow: 0 0 0.3em $color;
 }
 
-
 #app {
 	padding: 1.0em 1.0em;
-}
-
-header {
-  grid-area: header;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-main {
-  grid-area: main;
-}
-
-.top_wrapper {
- 	display: grid;
-  	grid-gap: 10px;
-  	grid-template-columns: 1fr  1fr;
-  	grid-template-areas:
-    "header header"
-	  "sidebar main"
 }
 
 .member{
@@ -47,6 +25,7 @@ main {
 
 .messages{
     @include box-shadow-containers($accent-color-1);
+
 }
 
 body{
@@ -68,4 +47,80 @@ header {
     padding: 7vh 2vh;        
     text-align: center;
     border-radius: 2px;
+}
+
+button {
+  margin-left:0.2em;
+  font-size: 1.3rem;
+  background:$base-color;
+  color:$accent-color-1;  
+  border:1px solid $accent-color-1;
+  border-radius: 2px;
+  padding: 0.2em 0.4em;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  &:active, &:hover, &:focus {
+    color: $header-text-color;
+      border-color: adjust-hue($accent-color-1, 45deg);    
+    box-shadow:0 0 0.8em adjust-hue($accent-color-1, 45deg);    
+  } 
+}
+
+li {
+  list-style: none;
+  text-align:left;
+}
+input{
+  width:200px;
+}
+
+.inputContainer{
+ float:left;
+ margin-left: 2.2em;
+}
+
+
+
+
+//layout
+.top_wrapper  {
+  max-width:1200px;
+  margin:0 auto;
+}
+
+
+@supports(display:grid){
+  .top_wrapper {
+    display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr  1fr;
+      grid-template-areas:
+      "header header"
+      "sidebar main"
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  @media(max-width:768px){
+    .top_wrapper {
+      display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+    }
+    
+  }
 }
