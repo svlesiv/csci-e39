@@ -4,7 +4,7 @@ import autobind from 'class-autobind'
 
 //Hello team Burj this is a test comment
 // This is also a test commit
-//another test
+//another one
 
 class Chat extends React.Component {
 
