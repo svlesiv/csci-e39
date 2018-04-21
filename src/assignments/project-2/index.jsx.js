@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
 
 //Hello team Burj this is a test comment
+// This is also a test commit
+//another one
 
 class Chat extends React.Component {
 
@@ -47,42 +49,42 @@ class Chat extends React.Component {
 		}
 	}
 
-	render() {
+render() {
 		const {classroom, chat, actions} = this.props
-		const {currentText} = this.state
+		const {currentText} = this.state;
 
-		return <div className="wrapper">
-			<header>
-				<h1>Chatroom</h1>
-			</header>
+		return(
+			<div className="top_wrapper">
+				<header className="container">
+					<h1>Chatroom</h1>
+				</header>
+​
+				<aside className="container member">
+					<h2>Members</h2>
+					<ul>
+						{classroom.students.map(({id, name}) =>
+							<li key={id}><span>{name}</span></li>
+						)}
+					</ul>
+				</aside>
+​
+				<main className="container messages">
+					<h2>Messages</h2>
+					<ul>
+						{chat.messages.map(({id, student, text, createdAt}) =>
+							<li key={id}>
+								<label>{student.name} at {createdAt.toISOString()}</label>
+								<p>{text}</p>
+							</li>
+						)}
+					</ul>
 
-			<aside>
-				<h2>Members</h2>
-				<ul>
-					{classroom.students.map(({id, name}) =>
-						<li key={id}><span>{name}</span></li>
-					)}
-				</ul>
-			</aside>
-
-			<main>
-				<h2>Messages</h2>
-				<ul>
-					{chat.messages.map(({id, student, text, createdAt}) =>
-						<li key={id}>
-							<label>{student.name} at {createdAt.toISOString()}</label>
-							<p>{text}</p>
-						</li>
-					)}
-				</ul>
-
-				<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-				<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-				<p>{this.getTypingMessage()}</p>
-			</main>
-		</div>
+					<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
+					<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
+					<p>{this.getTypingMessage()}</p>
+				</main>
+			</div>)
 	}
-
 }
 
 const studentPropType = PropTypes.shape({
