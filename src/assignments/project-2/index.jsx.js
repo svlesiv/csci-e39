@@ -81,10 +81,11 @@ render() {
 							</li>
 						)}
 					</ul>
-
-					<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-					<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-					<p>{this.getTypingMessage()}</p>
+					<div className="inputContainer">
+						<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
+						<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
+						<p>{this.getTypingMessage()}</p>
+					</div>
 				</main>
 			</div>)
 	}
