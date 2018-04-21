@@ -62,30 +62,21 @@ render() {
 					<h1>Chatroom</h1>
 				</header>
 ​
-				<aside className="container member">
-					<h2>Members</h2>
-					<ul>
-						{classroom.students.map(({id, name}) =>
-							<li key={id}><span>{name}</span></li>
-						)}
-					</ul>
-				</aside>
+				<Members 
+			        classroom={classroom}
+			      />
 ​
 				<main className="container messages">
-					<h2>Messages</h2>
-					<ul>
-						{chat.messages.map(({id, student, text, createdAt}) =>
-							<li key={id}>
-								<label>{student.name} at {createdAt.toISOString()}</label>
-								<p>{text}</p>
-							</li>
-						)}
-					</ul>
-					<div className="inputContainer">
-						<input value={currentText} onChange={this.onType} onKeyUp={this.onSend} />
-						<button disabled={currentText === ``} onClick={this.onSend}>Send</button>
-						<p>{this.getTypingMessage()}</p>
-					</div>
+					<Messages
+				        chat={chat}
+				      />
+
+					<ChatInput 
+				        currentText={this.currentText}
+				        onType={this.onType}
+				        onSend={this.onSend}
+				        getTypingMessage={this.getTypingMessage}
+				      />
 				</main>
 			</div>)
 	}

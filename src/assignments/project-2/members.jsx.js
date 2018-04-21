@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ListItem from './listItem.jsx'
 
 class Members extends React.Component {
   render() {
     const classroom = this.props.classroom
-    return <section>
+    return <aside className="container member">
       <h2>Members</h2>
       <ul>
         {classroom.students.map(({id, name}) =>
-          <li key={id}><span>{name}</span></li>
+          <ListItem 
+            type='member'
+            key={id}
+            name={name}
+          />
         )}
       </ul>
-    </section>
+    </aside>
   };
 }
 
