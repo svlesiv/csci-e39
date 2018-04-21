@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
+import Members from './members.jsx'
+import Messages from './messages.jsx'
+import ChatInput from './chatInput.jsx'
 
 //Hello team Burj this is a test comment
 // This is also a test commit
