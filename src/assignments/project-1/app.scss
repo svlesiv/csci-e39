@@ -152,7 +152,9 @@ li {
 .list ul {
 	padding:0;
 }
-
+.messages li:nth-child(even) {
+	background: lighten($base-color, 10);
+}
 a {
 	text-decoration: none;
 	color:$header-text-color;

@@ -70,6 +70,21 @@ li {
   list-style: none;
   text-align:left;
 }
+
+.messages li:nth-child(odd) {
+  background: lighten($base-color, 10);
+  border-radius:1em;
+  padding:1em;
+  max-width: 85%
+}
+
+.messages li:nth-child(even) {
+  background: lighten($base-color, 15);
+  border-radius:1em;
+  padding:1em;
+  max-width: 85%
+}
+
 input{
   width:200px;
 }
