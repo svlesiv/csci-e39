@@ -4,6 +4,8 @@ import autobind from 'class-autobind'
 
 class Chat extends React.Component {
 
+	//test
+
 	constructor() {
 		super(...arguments)
 		autobind(this)
