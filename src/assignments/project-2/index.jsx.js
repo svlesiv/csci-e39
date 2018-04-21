@@ -1,6 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
+import Members from './members.jsx'
+import Messages from './messages.jsx'
+import ChatInput from './chatInput.jsx'
+
+//Hello team Burj this is a test comment
+// This is also a test commit
+//another one
 
 class Chat extends React.Component {
 
@@ -49,6 +56,7 @@ class Chat extends React.Component {
 		const {classroom, chat, actions} = this.props
 		const {currentText} = this.state
 
+
 		return <div className="wrapper">
 			<header className = "example-container header">
 				<h1>Chatroom</h1>
@@ -87,9 +95,9 @@ class Chat extends React.Component {
 			
 
 			</main>
+
 		</div>
 	}
-
 }
 
 const studentPropType = PropTypes.shape({
