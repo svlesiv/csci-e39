@@ -19,6 +19,27 @@ $font-family-body:"Roboto", sans-serif;
 	padding: 1.0em 1.0em;
 }
 
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+.top_wrapper {
+ 	  display: grid;
+  	grid-gap: 10px;
+  	grid-template-columns: 1fr  1fr;
+  	grid-template-areas:
+    "header header"
+	  "sidebar main"
+}
+
 .member{
     @include box-shadow-containers($accent-color-1);
 }
