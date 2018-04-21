@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import autobind from 'class-autobind'
 
 //Hello team Burj this is a test comment
+// This is also a test commit
 
 class Chat extends React.Component {
 
