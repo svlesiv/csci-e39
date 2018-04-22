@@ -34,7 +34,7 @@ main {
 .top_wrapper {
  	  display: grid;
   	grid-gap: 10px;
-  	grid-template-columns: 1fr  1fr;
+  	grid-template-columns: 250px 1fr;
   	grid-template-areas:
     "header header"
 	  "sidebar main"
@@ -128,11 +128,11 @@ input{
 @supports(display:grid){
   .top_wrapper {
     display: grid;
-      grid-gap: 10px;
-      grid-template-columns: 1fr  1fr;
-      grid-template-areas:
-      "header header"
-      "sidebar main"
+    grid-gap: 10px;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
   }
 
   header {
