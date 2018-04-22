@@ -146,6 +146,11 @@ input{
   main {
     grid-area: main;
   }
+  
+  .ad *{
+  	display:block;
+  }
+  
 
   @media(max-width:768px){
     .top_wrapper {
