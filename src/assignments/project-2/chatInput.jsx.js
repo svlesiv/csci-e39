@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class chatInput extends React.Component {
   render() {
     const {onType, onSend, currentText, getTypingMessage}=this.props;
-    return <section>
+    return <section className="inputContainer">
       <input 
         value={currentText} 
         onChange={onType} 

@@ -7,7 +7,7 @@ class Messages extends React.Component {
 
     const chat= this.props.chat
     
-    return <section>
+    return <section class="messages-container">
       <h2>Messages</h2>
       <ul>
         {chat.messages.map(function(message) {
