@@ -4,6 +4,7 @@ import autobind from 'class-autobind'
 import Members from './members.jsx'
 import Messages from './messages.jsx'
 import ChatInput from './chatInput.jsx'
+import Ad from './ad.jsx'
 
 //Hello team Burj this is a test comment
 // This is also a test commit
@@ -61,12 +62,15 @@ render() {
 				<header className="container">
 					<h1>Chatroom</h1>
 				</header>
-​
-				<aside className="container member">
+
+​				<aside className="container member">
 					<Members 
-			        	classroom={classroom}
-			      	/>
-			    </aside>
+				        classroom={classroom}
+				      />
+
+				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/100" mobileImage="https://www.fillmurray.com/g/200/50" alt="ad image" text="Click"/>
+				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/100" mobileImage="https://www.fillmurray.com/g/200/50" alt="ad image" text="Click"/>
+				</aside>
 ​
 				<main className="container messages">
 					<Messages
