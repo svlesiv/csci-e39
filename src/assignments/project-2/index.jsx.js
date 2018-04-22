@@ -62,6 +62,7 @@ render() {
 				<header className="container">
 					<h1>Chatroom</h1>
 				</header>
+
 ​				<aside className="container member">
 					<Members 
 				        classroom={classroom}
