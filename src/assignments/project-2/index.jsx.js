@@ -59,19 +59,17 @@ render() {
 
 		return(
 			<div className="top_wrapper">
-				<header className="container">
+				<header className="container main">
 					<h1>Chatroom</h1>
 				</header>
-
-​				<aside className="container member">
+				<aside className="container member">
 					<Members 
 				        classroom={classroom}
 				      />
 
-				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/100" mobileImage="https://www.fillmurray.com/g/200/50" alt="ad image" text="Click"/>
-				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/100" mobileImage="https://www.fillmurray.com/g/200/50" alt="ad image" text="Click"/>
+				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/300" mobileImage="https://www.fillmurray.com/g/200/200" alt="ad image" text="Click"/>
+				    <Ad siteUrl="http://google.com" image="https://www.fillmurray.com/g/300/300" mobileImage="https://www.fillmurray.com/g/200/200" alt="ad image" text="Click"/>
 				</aside>
-​
 				<main className="container messages">
 					<Messages
 				        chat={chat}

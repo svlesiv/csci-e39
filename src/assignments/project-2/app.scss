@@ -18,13 +18,21 @@ $font-family-body:"Roboto", sans-serif;
 }
 
 #app {
-	padding: 1.0em 1.0em;
+	padding: 1em;
   height: 100vh;
   overflow: hidden;
 }
 
-header {
+.top_wrapper {
+  height: 100%;
+  max-width:1200px;
+  margin:0 auto;
+} 
+
+header.main {
   grid-area: header;
+  margin-top: 1em;
+  padding: .5em
 }
 
 aside {
@@ -35,14 +43,8 @@ main {
   grid-area: main;
 }
 
-.top_wrapper {
- 	  display: grid;
-  	grid-gap: 10px;
-  	grid-template-columns: 250px 1fr;
-  	grid-template-areas:
-    "header header"
-	  "sidebar main";
-    height: 100%;
+h2 {
+  margin-top: 0;
 }
 
 .member{
@@ -137,57 +139,23 @@ li {
 }
 
 .messages-container {
-  height: calc(100% - 36px);;
+  height: calc(100% - 45px);
+  overflow-y: scroll;
+  marginb-bottom: 15px;
+}
+
+.container.member {
   overflow-y: scroll;
 }
 
-
-//layout
-.top_wrapper  {
-  max-width:1200px;
-  margin:0 auto;
-}
-
-
-@supports(display:grid){
-  .top_wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 250px 1fr;
-    grid-template-areas:
-    "header header"
-    "sidebar main";
-    height: 100%;
-  }
-
-  header {
-    grid-area: header;
-  }
-
-  aside {
-    grid-area: sidebar;
-  }
-
-  main {
-    grid-area: main;
-  }
-  
-  .ad *{
-  	display:block;
-  }
-  
-
-  @media(max-width:768px){
-    .top_wrapper {
+.top_wrapper {
+  @media(min-width: 768px) {
       display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "header"
-        "sidebar"
-        "main";
-        height: 100%;
-    }
-    
+      grid-gap: 10px;
+      grid-template-columns: 250px 1fr;
+      grid-template-areas:
+      "header header"
+      "sidebar main";
+      height: 100%;
   }
 }

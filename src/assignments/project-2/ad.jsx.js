@@ -16,7 +16,7 @@ class Ad extends React.Component {
   render() {
     const {image, mobileImage, alt, text} = this.props;
 
-    return <div className="container ad">
+    return <div className="ad">
       <picture className="ad">
         <source media="(max-width: 767px)" srcSet={mobileImage} />
         <source media="(max-width: 768px)" srcSet={image} />
