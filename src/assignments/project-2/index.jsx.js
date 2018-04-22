@@ -4,6 +4,7 @@ import autobind from 'class-autobind'
 import Members from './members.jsx'
 import Messages from './messages.jsx'
 import ChatInput from './chatInput.jsx'
+import Ad from './ad.jsx'
 
 //Hello team Burj this is a test comment
 // This is also a test commit
