@@ -62,9 +62,11 @@ render() {
 					<h1>Chatroom</h1>
 				</header>
 ​
-				<Members 
-			        classroom={classroom}
-			      />
+				<aside className="container member">
+					<Members 
+			        	classroom={classroom}
+			      	/>
+			    </aside>
 ​
 				<main className="container messages">
 					<Messages

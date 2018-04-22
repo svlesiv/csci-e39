@@ -5,7 +5,7 @@ import ListItem from './listItem.jsx'
 class Members extends React.Component {
   render() {
     const classroom = this.props.classroom
-    return <aside className="container member">
+    return <section>
       <h2>Members</h2>
       <ul>
         {classroom.students.map(({id, name}) =>
@@ -16,7 +16,7 @@ class Members extends React.Component {
           />
         )}
       </ul>
-    </aside>
+    </section>
   };
 }
 
