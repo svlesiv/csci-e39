@@ -8,7 +8,7 @@ class Ad extends React.Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  clickHandler (e) {
+  clickHandler(e) {
     window.location = this.props.siteUrl;
     return false;
   }
