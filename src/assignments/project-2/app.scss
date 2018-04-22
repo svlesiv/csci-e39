@@ -125,13 +125,13 @@ li {
 }
 
 .messages li:nth-child(odd) {
-  background: lighten($base-color, 10);
+  background: darken($base-color, 5);
   border-radius: 1em;
   padding: 1em;
 }
 
 .messages li:nth-child(even) {
-  background: lighten($base-color, 15);
+  background: darken($base-color, 10);
   border-radius:1em;
   padding:1em;
 }
