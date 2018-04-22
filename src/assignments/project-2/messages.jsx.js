@@ -10,15 +10,21 @@ class Messages extends React.Component {
     return <section className="messages-container">
       <h2>Messages</h2>
       <ul>
-        {chat.messages.map(({id, student, text, createdAt}) =>
-          <ListItem 
+        {chat.messages.map(function(message) {
+          let hours = message.createdAt.getHours()
+          let minutes = message.createdAt.getMinutes()
+          minutes = (minutes < 10 ? "0" : "") + minutes;
+          let month = message.createdAt.getMonth()+1
+          let date = message.createdAt.getDate()
+          let year = message.createdAt.getFullYear()
+          return <ListItem
             type='message'
-            key={id}
-            name={student.name}
-            postedAt={createdAt.toISOString()}
-            text={text}
+            key={message.id}
+            name={message.student.name}
+            postedAt={`${hours}:${minutes} on ${month}/${date}/${year}`}
+            text={message.text}
           />
-        )}
+        })}
       </ul>
     </section>
   };
